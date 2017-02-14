@@ -6,7 +6,7 @@ export default Marionette.AppRouter.extend({
     console.log('router:initialized');
   },
 
-  controller: SessionsController,
+  controller: new SessionsController(),
   appRoutes: {
     'sessions': 'index',
     'sessions/new': 'new'
