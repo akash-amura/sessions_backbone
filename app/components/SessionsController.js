@@ -3,6 +3,7 @@ import SessionModel from './SessionModel';
 import SessionsCollection from './SessionsCollection';
 import CollectionView from './CollectionView';
 import LayoutView from './LayoutView';
+import FormItemView from './FormItemView';
 
 export default {
   index: function() {
@@ -21,7 +22,7 @@ export default {
 
     var collectionView = new CollectionView({collection: collection});
     console.log(collectionView);
-    //
+
     var layoutView = new LayoutView();
     console.log(layoutView);
 
@@ -33,5 +34,18 @@ export default {
     //var itemView = new ItemView({model: model});
     //console.log(itemView)
     //itemView.render();
+  },
+
+  new: function() {
+    var model = new SessionModel();
+
+    var layoutView = new LayoutView();
+    console.log(layoutView);
+
+    var formItemView = new FormItemView({model: model});
+
+    layoutView.render();
+    layoutView.showChildView('region1',formItemView);
+
   }
 }

@@ -8,6 +8,7 @@ export default Marionette.AppRouter.extend({
 
   controller: SessionsController,
   appRoutes: {
-    'sessions': 'index'
+    'sessions': 'index',
+    'sessions/new': 'new'
   }
 });
